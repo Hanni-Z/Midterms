@@ -13,11 +13,10 @@ jobs:
   process-and-commit:
     runs-on: ubuntu-latest
     permissions:
-      # Give the bot permission to write back to your repo
       contents: write
 
     steps:
-      # 1. Check out your code
+      # 1. Check out code
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -33,7 +32,6 @@ jobs:
           pip install opencv-python numpy opencv-contrib-python matplotlib
 
       # 4. Run your pipeline script
-      # This script (run_pipeline.py) now generates the 5 separate images
       - name: Run Image Processing
         run: python run_pipeline.py
 
@@ -52,6 +50,6 @@ jobs:
             echo "No changes to commit."
           else
             # Commit with [skip ci] to prevent infinite loops
-            git commit -m "Auto-processed images [skip ci]"
+            git commit -m "Auto-processed images"
             git push
           fi
