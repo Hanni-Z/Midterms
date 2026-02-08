@@ -1,0 +1,38 @@
+name: Image Processing Pipeline
+
+on:
+  push:
+    paths:
+      # TRIGGER: Only runs when files are added to this specific folder
+      - 'input_images/**.jpg'
+      - 'input_images/**.png'
+      - 'input_images/**.jpeg'
+
+jobs:
+  build-and-process:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # Install dependencies (OpenCV, etc.)
+      - name: Install Dependencies
+        run: |
+          pip install opencv-python numpy
+
+      # Run your manager script
+      - name: Run Processing Script
+        run: python run_pipeline.py
+
+      # Upload the results so you can download them
+      - name: Upload Processed Images
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-collection
+          path: output_images/
