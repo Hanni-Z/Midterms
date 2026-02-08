@@ -2,11 +2,11 @@ import os
 import cv2 # Assuming you use OpenCV, change to PIL if needed
 # Import your 5 techniques (After renaming folders to remove spaces)
 # You might need to adjust these imports based on your actual file names inside the folders
-from midterms.image_border import main as step1
-from midterms.kaleido_effect import main as step2
-from midterms.linear_filtering import main as step3
-from midterms.night_vision import main as step4
-from midterms.oil_painting import main as step5
+from Midterms.image_border import main as step1
+from Midterms.kaleido_effect import main as step2
+from Midterms.linear_filtering import main as step3
+from Midterms.night_vision import main as step4
+from Midterms.oil_painting import main as step5
 
 INPUT_DIR = 'input_images'
 OUTPUT_DIR = 'output_images'
