@@ -43,7 +43,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
           # Add the output folder to git
-          git add output_images/
+          git add -f output_images/
           
           # Check if there are changes before committing (avoids errors if no new images)
           if git diff --staged --quiet; then
