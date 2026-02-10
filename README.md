@@ -15,16 +15,16 @@ The project is designed to run all effects automatically in a full pipeline on a
 ## Tools and Technologies
 
 - Programming Language: Python 3.14
-- Libraries: OpenCV
+- Libraries: OpenCV, NumPy, Matplotlib
 - IDE: VSCode
-- Version Control: GitHub
+- Version Control: Git & GitHub
 
 ## System Features
 
-- Full pipeline processes all images in the input_images/ folder
+- Full pipeline processes all images in the `input_images/` folder
 - Automatically skips already processed images
-- Outputs saved in output_images/
-- Any new image placed in input_images/ will be automatically processed by the full pipeline and saved in output_images/
+- Outputs saved in `output_images/`
+- Any new image placed in `input_images/` will be automatically processed by the full pipeline and saved in `output_images/`
 
 ## Project Structure
 
@@ -43,11 +43,12 @@ C:.
 
 To run the full pipeline and all modules:
 
+```
 python tests/test_pipeline.py
+```
 
 - Full pipeline processes all input images and skips already processed ones
-- Output images saved in output_images/
-- Trying other type of image file
+- Output images saved in `output_images/`
 
 ## Continuous Integration
 
@@ -57,16 +58,22 @@ python tests/test_pipeline.py
 ## DevOps Workflow
 
 - Development of image processing effects in Python
-- Version control using GitHub
+- Version control using Git & GitHub
 - Testing done locally by the tester
-- Full pipeline automation handled via run_pipeline.py
+- Full pipeline automation handled via `run_pipeline.py`
 - CI/CD can be integrated for future automation
 
 ## Output
 
-- All processed images are saved in the output_images/ folder
+- All processed images are saved in the `output_images/` folder
 - Example output images:
   - Image Border Effect
   - Kaleidoscope Effect
 
-(Replace example images with actual output images for your presentation)
+_(Replace example images with actual output images for your presentation)_
+
+## Notes
+
+- All tests passed successfully
+- Output images are ready for presentation and review
+- If a non-image file is placed in `input_images/`, the pipeline will skip it or display an error without crashing
