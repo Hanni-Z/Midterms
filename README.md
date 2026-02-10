@@ -31,7 +31,6 @@ The project is designed to run all effects automatically in a full pipeline on a
 C:.
 │ README.md
 │ run_pipeline.py
-│ tests/
 │ output_images/
 │ image_border/
 │ kaleido_effect/
@@ -44,7 +43,7 @@ C:.
 To run the full pipeline and all modules:
 
 ```
-python tests/test_pipeline.py
+python run_pipeline.py
 ```
 
 - Full pipeline processes all input images and skips already processed ones
