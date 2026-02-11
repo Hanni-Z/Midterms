@@ -75,4 +75,4 @@ _(Replace example images with actual output images for your presentation)_
 
 - All tests passed successfully
 - Output images are ready for presentation and review
-- If a non-image file is placed in `input_images/`, the pipeline will skip it or display an error without crashing
+- If a non-image file is placed in `input_images/`, the pipeline will skip it without crashing
